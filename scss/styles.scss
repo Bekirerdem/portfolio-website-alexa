@@ -1,0 +1,214 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import "variables";
+
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button Dark/Light */
+
+/* REUSABLE CSS CLASSES */
+.section {
+    padding: 2rem 0 4rem;
+
+    &-title {
+        font-size: var(--h1-font-size);
+    }
+
+    &-subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mb-3);
+    }
+
+    &-title,
+    &-subtitle {
+        text-align: center;
+    }
+}
+
+/* LAYOUT */
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+
+    .nav {
+        max-width: 968px;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-menu {
+
+            &.show-menu {
+                bottom: 0;
+            }
+        }
+
+        &-logo,
+        &-toggle {
+            font-size: 1.5rem;
+            color: var(--title-color);
+            font-weight: var(--font-medium);
+
+            &:hover {
+                color: var(--first-color);
+            }
+        }
+
+        &-toggle {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        &-list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        &-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: var(--small-font-size);
+            color: var(--title-color);
+            font-weight: var(--font-medium);
+            transition: 0.3s;
+
+
+            &-icon {
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                color: var(--first-color);
+            }
+        }
+
+        &-close {
+            position: absolute;
+            right: 1.5rem;
+            bottom: .7rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--first-color);
+
+            &:hover {
+                color: var(--first-color-alt);
+            }
+        }
+    }
+
+    .container {
+        max-width: 768px;
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: 0.3s;
+    }
+}
+
+/* NAV */
+
+/* show menu */
+
+/* Active link */
+
+/* Change background header */
+
+/* HOME */
+
+/* BUTTONS */
+
+/* ABOUT */
+
+/* SKILLS */
+
+/* QUALIFICATION */
+
+/* SERVICES */
+
+/* Active Modal */
+
+/* PORTFOLIO */
+
+/* PROJECT IN MIND */
+
+/* TESTIMONIAL */
+
+/* CONTACT ME */
+
+/* FOOTER */
+
+/* SCROLL UP */
+
+/* Show scroll */
+
+/* SCROLL BAR */
+
+/* MEDIA QUERIES */
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */
