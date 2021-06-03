@@ -66,6 +66,18 @@ img {
 }
 
 /* LAYOUT */
+.container {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+
+    .grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+}
+
+/* HEADER */
 .header {
     width: 100%;
     position: fixed;
@@ -141,17 +153,6 @@ img {
             }
         }
     }
-
-    .container {
-        max-width: 768px;
-        margin-left: var(--mb-1-5);
-        margin-right: var(--mb-1-5);
-
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -168,23 +169,294 @@ img {
     }
 }
 
-/* NAV */
-
-/* show menu */
-
 /* Active link */
 
 /* Change background header */
 
 /* HOME */
+.home-container {
+    gap: 1rem;
+
+    .home-content {
+        grid-template-columns: .5fr 3fr;
+        padding-top: 1.5rem;
+        align-items: center;
+
+        .home-img {
+
+            .home-blob {
+                width: 200px;
+                fill: var(--first-color);
+
+                &-img {
+                    width: 170px;
+                }
+            }
+
+        }
+
+        .home-social {
+            display: grid;
+            grid-template-columns: max-content;
+            row-gap: 1rem;
+
+            &-icon {
+                font-size: 1.25rem;
+                color: var(--first-color);
+
+                &:hover {
+                    color: var(--first-color-alt);
+                }
+            }
+        }
+
+        .home-data {
+            grid-column: 1/3;
+
+            &-title {
+                font-size: var(--big-font-size);
+            }
+
+            &-subtitle {
+                font-size: var(--h3-font-size);
+                color: var(--text-color);
+                font-weight: var(--font-medium);
+                margin-bottom: var(--mb-0-75);
+            }
+
+            &-description {
+                margin-bottom: var(--mb-2);
+            }
+        }
+    }
+
+    .home-scroll {
+        display: none;
+
+        &-button {
+            color: var(--first-color);
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(.25rem);
+            }
+
+            &-name {
+                font-size: var(--small-font-size);
+                color: var(--title-color);
+                font-weight: var(--font-medium);
+                margin-right: var(--mb-0-25);
+            }
+
+            &-arrow {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
 
 /* BUTTONS */
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+
+    &:hover {
+        background-color: var(--first-color-alt);
+    }
+
+    &-icon {
+        font-size: 1.25rem;
+        margin-left: var(--mb-0-5);
+        transition: 0.3s;
+    }
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+}
 
 /* ABOUT */
+.about-container {
+
+    &-img {
+        width: 100%;
+        border-radius: .5rem;
+    }
+
+    &-data-description {
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+        margin-top: var(--mb-2);
+    }
+
+    &-data-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2-5);
+
+        &-title {
+            font-size: var(--h2-font-size);
+            font-weight: var(--font-semi-bold);
+            color: var(--title-color);
+        }
+
+        &-name {
+            font-size: var(--smaller-font-size);
+        }
+
+        &-title,
+        &-name {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 /* SKILLS */
+.skills-container {
+    row-gap: 0;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--mb-2);
+        cursor: pointer;
+
+        .skills-title {
+            font-size: var(--h3-font-size);
+        }
+
+        .skills-subtitle {
+            font-size: var(--small-font-size);
+            color: var(--text-color-light);
+        }
+
+        .skills-icon,
+        .skills-arrow {
+            font-size: 2rem;
+            color: var(--first-color);
+        }
+
+        .skills-arrow {
+            margin-left: auto;
+            transition: 0.4s;
+        }
+
+        .skills-icon {
+            margin-right: var(--mb-0-75);
+        }
+    }
+
+    .skills-open {
+
+        .skills-list {
+            height: max-content;
+            margin-bottom: var(--mb-2-5);
+        }
+
+        .skills-arrow {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .skills-close {
+
+        .skills-list {
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .skills-list {
+        row-gap: 1.5rem;
+        padding-left: 2.7rem;
+    }
+
+    .skills-titles {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--mb-0-5);
+    }
+
+    .skills-name {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .skills-bar,
+    .skills-percentage {
+        height: 5px;
+        border-radius: .25rem;
+    }
+
+    .skills-bar {
+        background-color: var(--first-color-lighter);
+    }
+
+    .skills-percentage {
+        display: block;
+        background-color: var(--first-color);
+    }
+
+    .skills-html {
+        width: 90%;
+    }
+
+    .skills-css {
+        width: 80%;
+    }
+
+    .skills-js {
+        width: 60%;
+    }
+
+    .skills-react {
+        width: 85%;
+    }
+
+    .skills-php {
+        width: 80%;
+    }
+
+    .skills-node {
+        width: 70%;
+    }
+
+    .skills-firebase {
+        width: 90%;
+    }
+
+    .skills-python {
+        width: 55%;
+    }
+
+    .skills-figma {
+        width: 90%;
+    }
+
+    .skills-sketch {
+        width: 85%;
+    }
+
+    .skills-ps {
+        width: 85%;
+    }
+
+}
 
 /* QUALIFICATION */
+
 
 /* SERVICES */
 
