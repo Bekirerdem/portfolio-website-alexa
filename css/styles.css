@@ -325,6 +325,21 @@ img {
   align-items: center;
 }
 
+.button-small {
+  padding: .75rem 1rem;
+}
+
+.button-link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button-link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
 /* ABOUT */
 .about-container-img {
   width: 100%;
@@ -561,6 +576,103 @@ img {
 }
 
 /* SERVICES */
+.services-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services-container .services-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.services-container .services-content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.services-container .services-content .services-icon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.services-container .services-content .services-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+
+.services-container .services-content .services-button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+.services-container .services-content .services-button:hover .button-icon {
+  transform: translateX(0.45rem);
+}
+
+.services-container .services-content .services-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.services-container .services-content .services-modal.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-container .services-content .services-modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.services-container .services-content .services-modal-content .services-modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.services-container .services-content .services-modal-content .services-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.services-container .services-content .services-modal-content .services-modal-services {
+  row-gap: 1rem;
+}
+
+.services-container .services-content .services-modal-content .services-modal-service {
+  display: flex;
+}
+
+.services-container .services-content .services-modal-content .services-modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-5);
+}
+
 /* Active Modal */
 /* PORTFOLIO */
 /* PROJECT IN MIND */
