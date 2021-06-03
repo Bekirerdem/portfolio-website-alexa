@@ -489,6 +489,77 @@ img {
 }
 
 /* QUALIFICATION */
+.qualification-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
+
+.qualification-tabs-button {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.qualification-tabs-button:hover {
+  color: var(--first-color);
+}
+
+.qualification-tabs-button .qualification-icon {
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+
+.qualification-tabs-button.qualification-active {
+  color: var(--first-color);
+}
+
+.qualification [data-content] {
+  display: none;
+}
+
+.qualification-active[data-content] {
+  display: block;
+}
+
+.qualification-data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.qualification-data .qualification-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.qualification-data .qualification-subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.qualification-data .qualification-calendar {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.qualification-data .qualification-rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.qualification-data .qualification-line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
+
 /* SERVICES */
 /* Active Modal */
 /* PORTFOLIO */
