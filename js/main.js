@@ -4,7 +4,6 @@ const navMenu = document.getElementById("nav-menu"),
   navClose = document.getElementById("nav-close");
 
 /* MENU SHOW */
-/* Validate if constant exists */
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
@@ -12,7 +11,6 @@ if (navToggle) {
 }
 
 /* MENU HIDDEN */
-/* Validate if constant exists */
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
@@ -29,7 +27,9 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /* ACCORDION SKILLS */
-const skillsContent = document.getElementsByClassName("skills-container-content"),
+const skillsContent = document.getElementsByClassName(
+    "skills-container-content"
+  ),
   skillsHeader = document.querySelectorAll(".skills-container-header");
 
 function toggleSkills() {
@@ -48,6 +48,24 @@ skillsHeader.forEach((el) => {
 });
 
 /* QUALIFICATION TABS */
+const tabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("qualification-active");
+    });
+    target.classList.add("qualification-active");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("qualification-active");
+    });
+    tab.classList.add("qualification-active");
+  });
+});
 
 /* SERVICES MODAL */
 
