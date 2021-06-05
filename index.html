@@ -7,7 +7,7 @@
     <title>Responsive Portfolio Website</title>
 
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -123,7 +123,9 @@
             <span class="section-subtitle">My introduction</span>
 
             <div class="about-container container grid">
-                <img src="img/about.jpg" alt="About" class="about-container-img">
+                <div class="about-container-img">
+                    <img src="img/about.jpg" alt="About" class="about-container-imgAlt">
+                </div>
 
                 <div class="about-container-data">
                     <p class="about-container-data-description">Web developer, withextensive knowledge years of
@@ -597,19 +599,80 @@
 
         <!-- PORTFOLIO -->
         <section class="portfolio section" id="portfolio">
-            
+            <h2 class="section-title">Portfolio</h2>
+            <span class="section-subtitle">Most recent work</span>
+
+            <div class="portfolio-container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- PORTFOLIO 1 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio1.jpg" alt="Portfolio" class="portfolio-img">
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Modern Website</h3>
+                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
+                                animated interactions.</p>
+                            <a href="#" class="button button-flex button-small portfolio-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- PORTFOLIO 2 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio2.jpg" alt="Portfolio" class="portfolio-img">
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Brand Design</h3>
+                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
+                                animated interactions.</p>
+                            <a href="#" class="button button-flex button-small portfolio-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- PORTFOLIO 3 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio3.jpg" alt="Portfolio" class="portfolio-img">
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Online Store</h3>
+                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
+                                animated interactions.</p>
+                            <a href="#" class="button button-flex button-small portfolio-button">
+                                Demo <i class="fas fa-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrow -->
+                <div class="swiper-button-next">
+                    <i class="fas fa-angle-right swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fas fa-angle-left swiper-portfolio-icon"></i>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
         <!-- PROJECT IN MIND -->
         <section class="project section">
-
-
+            <div class="project-bg">
+                <div class="project-container container grid">
+                    <div class="project-data">
+                        <h2 class="project-bg-title">You have a new project</h2>
+                        <p class="project-bg-description">Contact me now and get a 30% discount on your new project.</p>
+                        <a href="#contact" class="button button-flex button-white">
+                            Contact Me
+                            <i class="fab fa-telegram-plane project-icon button-icon"></i>
+                        </a>
+                    </div>
+                    <img src="img/project.png" alt="Project img" class="project-bg-img">
+                </div>
+            </div>
         </section>
 
         <!-- TESTIMONIAL -->
         <section class="testimonial section">
-
-
+            
         </section>
 
         <!-- CONTACT ME -->
@@ -631,7 +694,7 @@
     <script src="https://kit.fontawesome.com/027d3564f6.js" crossorigin="anonymous"></script>
 
     <!-- SWIPER JS -->
-    <script src=""></script>
+    <script src="js/swiper-bundle.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
