@@ -23,7 +23,7 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list grid">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">
+                        <a href="#home" class="nav-link active-link">
                             <i class="fas fa-home nav-link-icon"></i> Home
                         </a>
                     </li>
@@ -56,6 +56,10 @@
                 <i class="fas fa-times nav-close" id="nav-close"></i>
             </div>
             <div class="nav-btns">
+
+                <!-- Theme change button -->
+                <i class="fas fa-moon change-theme" id="theme-button"></i>
+
                 <div class="nav-toggle" id="nav-toggle">
                     <i class="fas fa-qrcode"></i>
                 </div>
@@ -353,7 +357,7 @@
                     <div class="qualification-content qualification-active" data-content id="education">
                         <!-- QUALIFICATION 1 -->
                         <div class="qualification-data">
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Computer Enginner</h3>
                                 <span class="qualification-subtitle">Peru - University</span>
                                 <div class="qualification-calendar">
@@ -375,7 +379,7 @@
                                 <span class="qualification-line"></span>
                             </div>
 
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Web Design</h3>
                                 <span class="qualification-subtitle">Spain - Institute</span>
                                 <div class="qualification-calendar">
@@ -386,7 +390,7 @@
                         </div>
                         <!-- QUALIFICATION 3 -->
                         <div class="qualification-data">
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Web Development</h3>
                                 <span class="qualification-subtitle">Peru - Institute</span>
                                 <div class="qualification-calendar">
@@ -408,7 +412,7 @@
                                 <!-- <span class="qualification-line"></span> -->
                             </div>
 
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Master in UI/UX</h3>
                                 <span class="qualification-subtitle">Peru - Institute</span>
                                 <div class="qualification-calendar">
@@ -423,7 +427,7 @@
                     <div class="qualification-content" data-content id="work">
                         <!-- QUALIFICATION 1 -->
                         <div class="qualification-data">
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Software Enginner</h3>
                                 <span class="qualification-subtitle">Microsoft - Peru</span>
                                 <div class="qualification-calendar">
@@ -445,7 +449,7 @@
                                 <span class="qualification-line"></span>
                             </div>
 
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">Frontend Developer</h3>
                                 <span class="qualification-subtitle">Apple Inc - Spain</span>
                                 <div class="qualification-calendar">
@@ -456,7 +460,7 @@
                         </div>
                         <!-- QUALIFICATION 3 -->
                         <div class="qualification-data">
-                            <div>
+                            <div class="qualification-data-alt">
                                 <h3 class="qualification-title">UI Designer</h3>
                                 <span class="qualification-subtitle">Figma - Spain</span>
                                 <div class="qualification-calendar">
@@ -659,7 +663,7 @@
                 <div class="project-container container grid">
                     <div class="project-data">
                         <h2 class="project-bg-title">You have a new project</h2>
-                        <p class="project-bg-description">Contact me now and get a 30% discount on your new project.</p>
+                        <p class="project-bg-description">Contact me now and get a 30% discount on your <br> new project.</p>
                         <a href="#contact" class="button button-flex button-white">
                             Contact Me
                             <i class="fab fa-telegram-plane project-icon button-icon"></i>
@@ -708,7 +712,7 @@
                                 <img src="img/testimonial2.jpg" alt="Testimonial" class="testimonial-img">
 
                                 <div>
-                                    <h3 class="testimonial-name">Matt Robinson</h3>
+                                    <h3 class="testimonial-name">Clark Kent</h3>
                                     <span class="testimonial-client">Client</span>
                                 </div>
                             </div>
@@ -753,17 +757,108 @@
 
         <!-- CONTACT ME -->
         <section class="contact section" id="contact">
-            
+            <h2 class="section-title">Contact Me</h2>
+            <span class="section-subtitle">Get in touch</span>
+
+            <div class="contact-container container grid">
+                <div class="contact-items">
+                    <div class="contact-information">
+                        <i class="fas fa-phone contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Call Me</h3>
+                            <span class="contact-subtitle">999-888-777</span>
+                        </div>
+                    </div>
+                    <div class="contact-information">
+                        <i class="far fa-envelope contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Email</h3>
+                            <span class="contact-subtitle">alexa@email.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-information">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Location</h3>
+                            <span class="contact-subtitle">Peru - Lima Av. Bolivar #123</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact-form grid">
+                    <div class="contact-inputs grid">
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Name</label>
+                            <input type="text" class="contact-input">
+                        </div>
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Email</label>
+                            <input type="email" class="contact-input">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Project</label>
+                            <input type="text" class="contact-input">
+                        </div>
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Message</label>
+                            <textarea style="resize: none;" rows="5" class="contact-input"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="contact-button">
+                    <a href="#" class="button button-flex">
+                        Send Message <i class="fab fa-telegram-plane button-icon"></i>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-container container grid">
+                <div class="footer-texts">
+                    <h1 class="footer-title">Alexa</h1>
+                    <span class="footer-subtitle">Frontend Developer</span>
+                </div>
 
-
+                <ul class="footer-links">
+                    <li>
+                        <a href="#services" class="footer-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer-link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer-link">Contact Me</a>
+                    </li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f footer-social"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter footer-social"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram footer-social"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copy">&#169; Bekir Erdem. All right reserved</p>
+        </div>
     </footer>
 
     <!-- SCROLL TOP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup-icon"></i>
+    </a>
 
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/027d3564f6.js" crossorigin="anonymous"></script>
